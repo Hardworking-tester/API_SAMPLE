@@ -80,21 +80,10 @@ def executeTest():
                 post_url=db.session.query(CaseInformationDb.url).filter_by(case_number=request.form.get(str(m))).all()[0][0]
                 first_post_data=db.session.query(CaseInformationDb.post_data).filter_by(case_number=request.form.get(str(m))).all()[0][0]
                 post_method=db.session.query(CaseInformationDb.post_method).filter_by(case_number=request.form.get(str(m))).all()[0][0]
-                # print post_url
-                # print first_post_data
-                # print post_method
                 result=post.Post().post(post_url,eval(first_post_data))
                 flag=result[0]
                 result_data=result[1]
-                print "================================"
-                print result
-                print flag
-                print result_data
-                print type(result_data)
-                print case_id
-                print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
                 add_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-
                 test_result_data = ResultTestDb(id=id, case_number=request.form.get(str(m)), case_result=str(result_data), Result_flag=flag,add_time=add_time)
                 db.session.add(test_result_data)
                 db.session.commit()

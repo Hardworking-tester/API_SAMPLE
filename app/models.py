@@ -73,7 +73,9 @@ class ResultTestDb(db.Model):
     def __repr__(self):
         return '%s ' % self.case_number
 
-# db.create_all()
+print db.session.query(ResultTestDb).all()
+print ResultTestDb.query.order_by(db.desc(ResultTestDb.add_time)).all()
+# User.query.order_by(db.desc(User.id))
 # db.drop_all()
 # print  db.session.query(CaseDataDb).all()
 # print query_case_information
