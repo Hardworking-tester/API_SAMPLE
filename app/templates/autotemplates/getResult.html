@@ -1,0 +1,33 @@
+{%extends "base.html"%}
+{%import "bootstrap/wtf.html" as wtf%}
+{%block title%}AddFunctionModel{%endblock%}
+{% block page_content %}
+<h1>各用例测试结果为：</h1>
+<!--<div class="col-md-4">-->
+    <table width="100%"  cellspacing="50%" cellpadding="80" border="8">
+            <tr>
+                <td width="10%">测试用例编号</td>
+                <td width="60%">测试结果</td>
+                <td width="10%">测试是否成功</td>
+                <td width="10%">测试完成时间</td>
+                <td width="10%">测试结果图片</td>
+            </tr>
+            {% for result in result_data%}
+            <tr>
+                <td>{{result[1]}}</td>
+
+                <td>{{result[3]}}</td>
+                {% if result[2]=="1" %}
+                <td>测试通过</td>
+                {% else %}
+                <td>测试未通过</td>
+                {%endif%}
+                <td>{{result[4]}}</td>
+                <td>{{result[5]}}</td>
+            </tr>
+            {%endfor%}
+
+        </table>
+<!--</div>-->
+{% endblock %}
+

@@ -1,0 +1,536 @@
+1475202342628	addons.manager	DEBUG	Application has been upgraded
+1475202342750	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/XPIProvider.jsm: ["XPIProvider"]
+1475202342752	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/LightweightThemeManager.jsm: ["LightweightThemeManager"]
+1475202342756	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/GMPProvider.jsm
+1475202342758	addons.manager	DEBUG	Loaded provider scope for resource://gre/modules/addons/PluginProvider.jsm
+1475202342759	addons.manager	DEBUG	Starting provider: XPIProvider
+1475202342759	addons.xpi	DEBUG	startup
+1475202342759	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1475202342760	addons.xpi	INFO	Mapping e10srollout@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1475202342761	addons.xpi	INFO	Mapping firefox@getpocket.com to C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1475202342761	addons.xpi	INFO	Mapping loop@mozilla.org to C:\Program Files (x86)\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1475202342762	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+1475202342762	addons.xpi	DEBUG	checkForChanges
+1475202342763	addons.xpi	DEBUG	Loaded add-on state from prefs: {}
+1475202342764	addons.xpi	DEBUG	New add-on e10srollout@mozilla.org in app-system-defaults
+1475202342764	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1475202342764	addons.xpi	DEBUG	New add-on firefox@getpocket.com in app-system-defaults
+1475202342765	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1475202342765	addons.xpi	DEBUG	New add-on loop@mozilla.org in app-system-defaults
+1475202342765	addons.xpi	DEBUG	getModTime: Recursive scan of loop@mozilla.org
+1475202342766	addons.xpi	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1475202342766	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1475202342766	addons.xpi	DEBUG	getInstallState changed: true, state: {"app-system-defaults":{"e10srollout@mozilla.org":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","st":1469569266620},"firefox@getpocket.com":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","st":1469569266670},"loop@mozilla.org":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\loop@mozilla.org.xpi","st":1469569266832}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","st":1469569266618}}}
+1475202342773	addons.xpi-utils	DEBUG	Opening XPI database C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.PfwJw8OKSJTH\extensions.json
+1475202342775	addons.xpi-utils	DEBUG	New add-on e10srollout@mozilla.org installed in app-system-defaults
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1475202342788	DeferredSave.extensions.json	DEBUG	Save changes
+1475202342789	addons.xpi-utils	DEBUG	New add-on firefox@getpocket.com installed in app-system-defaults
+1475202342792	DeferredSave.extensions.json	DEBUG	Starting timer
+1475202342793	DeferredSave.extensions.json	DEBUG	Save changes
+1475202342793	addons.xpi-utils	DEBUG	New add-on loop@mozilla.org installed in app-system-defaults
+1475202342800	DeferredSave.extensions.json	DEBUG	Save changes
+1475202342801	addons.xpi-utils	DEBUG	New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+1475202342806	DeferredSave.extensions.json	DEBUG	Save changes
+1475202342806	addons.xpi-utils	INFO	Hiding the updated system add-ons.
+1475202342811	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1475202342822	addons.xpi	DEBUG	Calling bootstrap method install on e10srollout@mozilla.org version 1.0
+1475202342823	addons.xpi-utils	DEBUG	Make addon app-system-defaults:e10srollout@mozilla.org visible
+1475202342823	DeferredSave.extensions.json	DEBUG	Save changes
+1475202342824	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1475202342828	addons.xpi	DEBUG	Calling bootstrap method install on firefox@getpocket.com version 1.0.4
+1475202342828	addons.xpi-utils	DEBUG	Make addon app-system-defaults:firefox@getpocket.com visible
+1475202342828	DeferredSave.extensions.json	DEBUG	Save changes
+1475202342829	addons.xpi	DEBUG	Loading bootstrap scope from C:\Program Files (x86)\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1475202342836	addons.xpi	DEBUG	Calling bootstrap method install on loop@mozilla.org version 1.4.3
+1475202342836	addons.xpi-utils	DEBUG	Make addon app-system-defaults:loop@mozilla.org visible
+1475202342836	DeferredSave.extensions.json	DEBUG	Save changes
+1475202342836	addons.xpi-utils	DEBUG	Make addon app-global:{972ce4c6-7e08-4474-a285-3208198ce6fd} visible
+1475202342837	DeferredSave.extensions.json	DEBUG	Save changes
+1475202342837	addons.xpi	DEBUG	Updating XPIState for {"id":"e10srollout@mozilla.org","syncGUID":"uq6EnfmQXxJ6","location":"app-system-defaults","version":"1.0","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Multi-process staged rollout","description":"Staged rollout of Firefox multi-process feature.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\e10srollout@mozilla.org.xpi","installDate":1469569266620,"updateDate":1469569266620,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":4824,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"48.0","maxVersion":"48.*"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
+1475202342837	addons.xpi	DEBUG	getModTime: Recursive scan of e10srollout@mozilla.org
+1475202342838	addons.xpi	DEBUG	Updating XPIState for {"id":"firefox@getpocket.com","syncGUID":"Bu9GbjIvfC0N","location":"app-system-defaults","version":"1.0.4","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Pocket","description":"When you find something you want to view later, put it in Pocket.","creator":null,"homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\firefox@getpocket.com.xpi","installDate":1469569266670,"updateDate":1469569266670,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":895299,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"48.0","maxVersion":"48.*"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
+1475202342838	addons.xpi	DEBUG	getModTime: Recursive scan of firefox@getpocket.com
+1475202342839	addons.xpi	DEBUG	Updating XPIState for {"id":"loop@mozilla.org","syncGUID":"Zjmd25yZt43b","location":"app-system-defaults","version":"1.4.3","type":"extension","internalName":null,"updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Firefox Hello","description":"Web sharing for Firefox","creator":"Mozilla","homepageURL":null},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\features\\loop@mozilla.org.xpi","installDate":1469569266832,"updateDate":1469569266832,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":4274926,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"46.0a1","maxVersion":"48.*"},{"id":"xpcshell@tests.mozilla.org","minVersion":"0","maxVersion":"10"}],"targetPlatforms":[],"multiprocessCompatible":false,"seen":true}
+1475202342839	addons.xpi	DEBUG	getModTime: Recursive scan of loop@mozilla.org
+1475202342839	addons.xpi	DEBUG	Updating XPIState for {"id":"{972ce4c6-7e08-4474-a285-3208198ce6fd}","syncGUID":"7XLFEC3L-y6I","location":"app-global","version":"48.0","type":"theme","internalName":"classic/1.0","updateURL":null,"updateKey":null,"optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{"32":"icon.png","48":"icon.png"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"Default","description":"The default theme.","creator":"Mozilla","homepageURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","installDate":1469569266618,"updateDate":1469569266618,"applyBackgroundUpdates":1,"skinnable":true,"size":21899,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"48.0","maxVersion":"48.0"}],"targetPlatforms":[],"seen":true}
+1475202342839	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1475202342841	DeferredSave.extensions.json	DEBUG	Save changes
+1475202342841	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1475202342841	addons.xpi-utils	DEBUG	Updating add-on states
+1475202342842	addons.xpi-utils	DEBUG	Writing add-ons list
+1475202342847	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1475202342847	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.0
+1475202342848	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1475202342848	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.4
+1475202342849	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1475202342850	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.4.3
+1475202342871	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1475202342871	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1475202342871	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1475202342872	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1475202342872	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1475202342872	addons.manager	DEBUG	Starting provider: GMPProvider
+1475202342877	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1475202342877	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1475202342877	addons.manager	DEBUG	Starting provider: PluginProvider
+1475202342877	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1475202342877	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1475202342878	addons.manager	DEBUG	Completed startup sequence
+1475202343453	Marionette	INFO	Listening on port 3031
+1475202344285	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1475202344285	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1475202344285	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1475202344388	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1475202344388	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1475202344388	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1475202344389	DeferredSave.extensions.json	DEBUG	Starting write
+1475202344679	DeferredSave.extensions.json	DEBUG	Write succeeded
+1475202344679	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: aAddon._installLocation is undefined
+Full stack: shouldVerifySignedState@resource://gre/modules/addons/XPIProvider.jsm:1676:1
+verifyZipSignedState@resource://gre/modules/addons/XPIProvider.jsm:1709:8
+loadManifestFromZipReader<@resource://gre/modules/addons/XPIProvider.jsm:1433:35
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromZipFile<@resource://gre/modules/addons/XPIProvider.jsm:1462:26
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+loadManifestFromFile@resource://gre/modules/addons/XPIProvider.jsm:1472:12
+AddonInstaller.InstallerService._installExtension/<@resource://addoninstaller/installerService.js:218:41
+AddonInstaller.InstallerService._shouldInstall/<@resource://addoninstaller/installerService.js:311:17
+safeCall@resource://gre/modules/AddonManager.jsm:179:5
+makeSafe/<@resource://gre/modules/AddonManager.jsm:195:25
+Handler.prototype.process@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:937:23
+this.PromiseWalker.walkerLoop@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:816:7
+this.PromiseWalker.scheduleWalkerLoop/<@resource://gre/modules/Promise.jsm -> resource://gre/modules/Promise-backend.js:750:11
+
+*************************
+1475202346400	Marionette	INFO	startBrowser d9f02018-f606-4113-9442-c595143df6eb
+1475202346409	Marionette	INFO	sendAsync d9f02018-f606-4113-9442-c595143df6eb
+1475202346533	addons.repository	DEBUG	cacheAddons: enabled false IDs ["cehomepage@mozillaonline.com"]
+1475202346543	addons.xpi	DEBUG	Starting install of cehomepage@mozillaonline.com from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/cehomepage@mozillaonline.com.xpi
+1475202346545	addons.repository	DEBUG	cacheAddons: enabled false IDs ["cpmanager@mozillaonline.com"]
+1475202346556	addons.xpi	DEBUG	Starting install of cpmanager@mozillaonline.com from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/cpmanager@mozillaonline.com.xpi
+1475202346557	addons.repository	DEBUG	cacheAddons: enabled false IDs ["wx-assistant@mozillaonline.com"]
+1475202346566	addons.xpi	DEBUG	Starting install of wx-assistant@mozillaonline.com from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/wx-assistant@mozillaonline.com.xpi
+1475202346567	addons.repository	DEBUG	cacheAddons: enabled false IDs ["commonfix@mozillaonline.com"]
+1475202346573	addons.xpi	DEBUG	Starting install of commonfix@mozillaonline.com from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/commonfix@mozillaonline.com.xpi
+1475202346574	addons.repository	DEBUG	cacheAddons: enabled false IDs ["easyscreenshot@mozillaonline.com"]
+1475202346581	addons.xpi	DEBUG	Starting install of easyscreenshot@mozillaonline.com from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/easyscreenshot@mozillaonline.com.xpi
+1475202346582	addons.repository	DEBUG	cacheAddons: enabled false IDs ["tabtweak@mozillaonline.com"]
+1475202346589	addons.xpi	DEBUG	Starting install of tabtweak@mozillaonline.com from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/tabtweak@mozillaonline.com.xpi
+1475202346608	addons.repository	DEBUG	cacheAddons: enabled false IDs ["coba@mozilla.com.cn"]
+1475202346615	addons.xpi	DEBUG	Starting install of coba@mozilla.com.cn from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/coba@mozilla.com.cn.xpi
+1475202346691	Marionette	INFO	sendAsync d9f02018-f606-4113-9442-c595143df6eb
+1475202346723	addons.xpi	DEBUG	Addon cehomepage@mozillaonline.com will be installed as an unpacked directory
+1475202346724	addons.xpi	DEBUG	Addon cpmanager@mozillaonline.com will be installed as an unpacked directory
+1475202346725	addons.xpi	DEBUG	Addon wx-assistant@mozillaonline.com will be installed as a packed xpi
+1475202346727	addons.xpi	DEBUG	Addon commonfix@mozillaonline.com will be installed as a packed xpi
+1475202346728	addons.xpi	DEBUG	Addon easyscreenshot@mozillaonline.com will be installed as an unpacked directory
+1475202346729	addons.xpi	DEBUG	Addon tabtweak@mozillaonline.com will be installed as a packed xpi
+1475202346730	addons.xpi	DEBUG	Addon coba@mozilla.com.cn will be installed as an unpacked directory
+1475202346848	addons.xpi	INFO	Mapping wx-assistant@mozillaonline.com to C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.PfwJw8OKSJTH\extensions\wx-assistant@mozillaonline.com.xpi
+1475202346848	addons.xpi-utils	DEBUG	Make addon app-profile:wx-assistant@mozillaonline.com visible
+1475202346849	DeferredSave.extensions.json	DEBUG	Save changes
+1475202346849	DeferredSave.extensions.json	DEBUG	Save changes
+1475202346849	addons.xpi	DEBUG	XPIStates adding add-on wx-assistant@mozillaonline.com in app-profile: C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.PfwJw8OKSJTH\extensions\wx-assistant@mozillaonline.com.xpi
+1475202346850	addons.xpi	DEBUG	Updating XPIState for {"id":"wx-assistant@mozillaonline.com","syncGUID":"FVVoOh4fEAWL","location":"app-profile","version":"1.1.5","type":"extension","internalName":null,"updateURL":"http://g-fox.cn/chinaedition/addons/wxassistant/update.rdf","updateKey":"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCpFmVAM8fYNRL++4sBuPoLijMqvyFtylorBpDBZJZLyoqAP2R4YXtjtRR0PSyvWXH0p6+CHQiY4BdjBLS/qgf8sfhoMbbMRxUhdxz9NSWMwY+iBHq9SP8VJLquLtKRUOVk2+eFLlu/XJazKwnPC17NgqJtHqE+uhhPpTmmDW3C3wIDAQAB","optionsURL":null,"optionsType":"2","aboutURL":null,"icons":{"32":"icon.png","48":"icon.png","64":"icon64.png"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"微信网页版助手","description":"一键打开微信网页版，同时在微信有新消息时给出及时的消息提醒","creator":"Mozilla Online Ltd.","homepageURL":"http://firefox.com.cn/"},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.PfwJw8OKSJTH\\extensions\\wx-assistant@mozillaonline.com.xpi","installDate":1475202346558,"updateDate":1475202346558,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":171994,"sourceURI":"file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/wx-assistant@mozillaonline.com.xpi","releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"29.0","maxVersion":"40.*"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":1,"seen":true}
+1475202346850	addons.xpi	DEBUG	getModTime: Recursive scan of wx-assistant@mozillaonline.com
+1475202346850	DeferredSave.extensions.json	DEBUG	Save changes
+1475202346850	DeferredSave.extensions.json	DEBUG	Save changes
+1475202346851	addons.xpi	DEBUG	Loading bootstrap scope from C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.PfwJw8OKSJTH\extensions\wx-assistant@mozillaonline.com.xpi
+1475202346855	addons.xpi	DEBUG	Calling bootstrap method install on wx-assistant@mozillaonline.com version 1.1.5
+1475202346855	addons.xpi	DEBUG	Install of file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/wx-assistant@mozillaonline.com.xpi completed.
+1475202346874	addons.xpi	DEBUG	Registering manifest for C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.PfwJw8OKSJTH\extensions\wx-assistant@mozillaonline.com.xpi
+1475202346875	addons.xpi	DEBUG	Calling bootstrap method startup on wx-assistant@mozillaonline.com version 1.1.5
+1475202346920	DeferredSave.extensions.json	DEBUG	Starting timer
+1475202346939	addons.xpi	DEBUG	removeTemporaryFile: file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/wx-assistant@mozillaonline.com.xpi does not own temp file
+1475202346961	addons.xpi	INFO	Mapping commonfix@mozillaonline.com to C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.PfwJw8OKSJTH\extensions\commonfix@mozillaonline.com.xpi
+1475202346962	addons.xpi-utils	DEBUG	Make addon app-profile:commonfix@mozillaonline.com visible
+1475202346962	DeferredSave.extensions.json	DEBUG	Save changes
+1475202346962	DeferredSave.extensions.json	DEBUG	Save changes
+1475202346962	addons.xpi	DEBUG	XPIStates adding add-on commonfix@mozillaonline.com in app-profile: C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.PfwJw8OKSJTH\extensions\commonfix@mozillaonline.com.xpi
+1475202346962	addons.xpi	DEBUG	Updating XPIState for {"id":"commonfix@mozillaonline.com","syncGUID":"laBqEBx2uKJK","location":"app-profile","version":"0.13","type":"extension","internalName":null,"updateURL":"http://g-fox.cn/chinaedition/addons/commonfix/update.rdf?version=%ITEM_VERSION%","updateKey":"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDeWvjaUcwQNMeAWcb1wdPKadNOUPB2Dp9/4SMWOshbJp7NcY+q46tt1rxwKJa+YVo7ohz5MxqWhxaQaAmEEhrUPIDNTvHEaBrpPMRXWGocSPd6reTvrncivMQpchW2wskMrYZUqtnslffxTKHvLuMnANzdzybzFkqaUDcYPbcEBwIDAQAB","optionsURL":null,"optionsType":null,"aboutURL":null,"icons":{"32":"icon.png","48":"icon.png","64":"icon64.png"},"iconURL":null,"icon64URL":null,"defaultLocale":{"name":"火狐修复工具","description":"让您方便的一键修复大部分浏览器使用中的常见问题，也可以针对您所遇到的问题选择手动修复、或是向我们报告问题获得帮助。网站无法登录、flash播放崩溃、迅雷下载无法关联等问题，帮您快速修复。","creator":"Mozilla Online Ltd.","homepageURL":"http://firefox.com.cn/"},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.PfwJw8OKSJTH\\extensions\\commonfix@mozillaonline.com.xpi","installDate":1475202346568,"updateDate":1475202346568,"applyBackgroundUpdates":1,"bootstrap":true,"skinnable":false,"size":131376,"sourceURI":"file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/commonfix@mozillaonline.com.xpi","releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":false,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"29.0","maxVersion":"40.*"}],"targetPlatforms":[{"os":"WINNT","abi":null}],"multiprocessCompatible":false,"signedState":1,"seen":true}
+1475202346962	addons.xpi	DEBUG	getModTime: Recursive scan of commonfix@mozillaonline.com
+1475202346963	DeferredSave.extensions.json	DEBUG	Save changes
+1475202346964	DeferredSave.extensions.json	DEBUG	Save changes
+1475202346965	addons.xpi	DEBUG	Loading bootstrap scope from C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.PfwJw8OKSJTH\extensions\commonfix@mozillaonline.com.xpi
+1475202346969	addons.xpi	DEBUG	Calling bootstrap method install on commonfix@mozillaonline.com version 0.13
+1475202346969	addons.xpi	DEBUG	Install of file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/commonfix@mozillaonline.com.xpi completed.
+1475202346991	addons.xpi	DEBUG	Registering manifest for C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.PfwJw8OKSJTH\extensions\commonfix@mozillaonline.com.xpi
+1475202346993	addons.xpi	DEBUG	Calling bootstrap method startup on commonfix@mozillaonline.com version 0.13
+1475202347073	addons.xpi	DEBUG	removeTemporaryFile: file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/commonfix@mozillaonline.com.xpi does not own temp file
+1475202347081	DeferredSave.extensions.json	DEBUG	Starting write
+1475202347605	addons.xpi	DEBUG	Staged install of tabtweak@mozillaonline.com from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/tabtweak@mozillaonline.com.xpi ready; waiting for restart.
+1475202347617	addons.xpi	DEBUG	removeTemporaryFile: file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/tabtweak@mozillaonline.com.xpi does not own temp file
+JavaScript warning: http://sso.xnwmall.com/static/js/jquery.1.10.2.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1475202347969	DeferredSave.extensions.json	DEBUG	Write succeeded
+1475202348202	Marionette	INFO	sendAsync d9f02018-f606-4113-9442-c595143df6eb
+1475202348224	Marionette	INFO	sendAsync d9f02018-f606-4113-9442-c595143df6eb
+1475202350293	Marionette	INFO	sendAsync d9f02018-f606-4113-9442-c595143df6eb
+1475202350305	Marionette	INFO	sendAsync d9f02018-f606-4113-9442-c595143df6eb
+1475202350710	addons.xpi	DEBUG	Staged install of coba@mozilla.com.cn from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/coba@mozilla.com.cn.xpi ready; waiting for restart.
+1475202350723	addons.xpi	DEBUG	removeTemporaryFile: file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/coba@mozilla.com.cn.xpi does not own temp file
+1475202351525	addons.xpi	DEBUG	Staged install of easyscreenshot@mozillaonline.com from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/easyscreenshot@mozillaonline.com.xpi ready; waiting for restart.
+1475202351538	addons.xpi	DEBUG	removeTemporaryFile: file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/easyscreenshot@mozillaonline.com.xpi does not own temp file
+1475202351609	addons.xpi	DEBUG	Staged install of cehomepage@mozillaonline.com from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/cehomepage@mozillaonline.com.xpi ready; waiting for restart.
+1475202351621	addons.xpi	DEBUG	removeTemporaryFile: file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/cehomepage@mozillaonline.com.xpi does not own temp file
+1475202352353	Marionette	INFO	sendAsync d9f02018-f606-4113-9442-c595143df6eb
+1475202352358	Marionette	INFO	sendAsync d9f02018-f606-4113-9442-c595143df6eb
+1475202352494	addons.xpi	DEBUG	Staged install of cpmanager@mozillaonline.com from file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/cpmanager@mozillaonline.com.xpi ready; waiting for restart.
+1475202352542	addons.xpi	DEBUG	removeTemporaryFile: file:///C:/Program%20Files%20(x86)/Mozilla%20Firefox/distribution/myextensions/cpmanager@mozillaonline.com.xpi does not own temp file
+1475202359431	Marionette	INFO	sendAsync d9f02018-f606-4113-9442-c595143df6eb
+1475202363437	Marionette	INFO	sendAsync d9f02018-f606-4113-9442-c595143df6eb
+1475202363578	addons.xpi	DEBUG	Calling bootstrap method shutdown on e10srollout@mozilla.org version 1.0
+1475202363579	addons.xpi	DEBUG	Calling bootstrap method shutdown on firefox@getpocket.com version 1.0.4
+1475202363579	addons.xpi	DEBUG	Calling bootstrap method shutdown on loop@mozilla.org version 1.4.3
+1475202363582	addons.xpi	DEBUG	Calling bootstrap method shutdown on wx-assistant@mozillaonline.com version 1.1.5
+1475202363588	addons.xpi	DEBUG	Calling bootstrap method shutdown on commonfix@mozillaonline.com version 0.13
+console.error: commonfix: 
+  Message: ReferenceError: reason is not defined
+  Stack:
+    exports.onUnload@resource://gre/modules/commonjs/toolkit/loader.js -> resource://commonfix-at-mozillaonline-dot-com/commonfix/lib/main.js:316:1
+unload/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/system/unload.js:58:7
+unload@resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/system/unload.js:56:3
+onunload@resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/system/unload.js:77:5
+Observer<.observe@resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/system/events.js:81:7
+unload@resource://gre/modules/commonjs/toolkit/loader.js:795:3
+shutdown@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Users/ADMINI~1/AppData/Local/Temp/rust_mozprofile.PfwJw8OKSJTH/extensions/commonfix@mozillaonline.com.xpi!/bootstrap.js:303:5
+this.XPIProvider.callBootstrapMethod@resource://gre/modules/addons/XPIProvider.jsm:4775:9
+this.XPIProvider.startup/<.observe@resource://gre/modules/addons/XPIProvider.jsm:2790:15
+GeckoDriver.prototype.quitApplication@chrome://marionette/content/driver.js:2611:3
+Dispatcher.prototype.execute/req<@chrome://marionette/content/dispatcher.js:126:20
+TaskImpl_run@resource://gre/modules/Task.jsm:319:40
+TaskImpl@resource://gre/modules/Task.jsm:280:3
+createAsyncFunction/asyncFunction@resource://gre/modules/Task.jsm:254:14
+Task_spawn@resource://gre/modules/Task.jsm:168:12
+Dispatcher.prototype.execute@chrome://marionette/content/dispatcher.js:120:13
+Dispatcher.prototype.onPacket@chrome://marionette/content/dispatcher.js:91:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:479:9
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+
+
+her.js:91:5
+DebuggerTransport.prototype._onJSONObjectReady/<@chrome://marionette/content/server.js -> resource://devtools/shared/transport/transport.js:479:9
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+exports.makeInfallible/<@resource://gre/modules/commonjs/toolkit/loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:101:14
+

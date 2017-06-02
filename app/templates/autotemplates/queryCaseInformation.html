@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+{%import "bootstrap/wtf.html" as wtf%}
+{%block title%}AddFunctionModel{%endblock%}
+{% block page_content %}
+<h1>测试查询结果为：</h1>
+<div class="col-md-4">
+    <!--<div class="col-md-4">-->
+
+        <ul>
+        {% for case_information in case_informations %}
+            <li>测试用例编号为：{{case_information}}</li>
+        {% endfor %}
+        </ul>
+    <!--</div>-->
+</div>
+{% endblock %}
