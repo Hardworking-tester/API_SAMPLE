@@ -27,9 +27,8 @@ class CaseInformationForm(Form):
     def __init__(self,*args, **kwargs):
         super(CaseInformationForm, self).__init__(*args, **kwargs)
         self.model_name.choices = [(FunctionModels.id, FunctionModels.name)
-                             for FunctionModels in FunctionModelsDb.query.all()]
-        # self.post_method = [('0','post'),('1','get')]
-        # print self.model_name.choices
+                             for FunctionModels in db.session.query(FunctionModelsDb).all()]
+
 
 
 class DataTestForm(Form):
