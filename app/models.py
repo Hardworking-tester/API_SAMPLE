@@ -73,8 +73,18 @@ class ResultTestDb(db.Model):
     def __repr__(self):
         return '%s ' % self.case_number
 
-print db.session.query(ResultTestDb).all()
-print ResultTestDb.query.order_by(db.desc(ResultTestDb.add_time)).all()
+# print db.session.query(ResultTestDb).all()
+# print ResultTestDb.query.order_by(db.desc(ResultTestDb.add_time)).all()
+# print db.session.query(ResultTestDb).order_by(db.desc(ResultTestDb.add_time)).count()
+# print db.session.query(ResultTestDb).order_by(db.desc(ResultTestDb.add_time)).filter_by(Result_flag=1).count()
+# print db.session.query(ResultTestDb.id,ResultTestDb.case_number,ResultTestDb.Result_flag,ResultTestDb.case_result,ResultTestDb.add_time,ResultTestDb.image_path).order_by(db.desc(ResultTestDb.add_time)).filter_by(case_number='case_0001').all()
+# dd=[]
+# for cas_number in ['case_0001','case_0002']:
+#     print cas_number
+    # result_list=db.session.query(ResultTestDb.id,ResultTestDb.case_number,ResultTestDb.Result_flag,ResultTestDb.add_time).order_by(db.desc(ResultTestDb.add_time)).filter_by(case_number=cas_number).first()
+    # print result_list
+    # dd.append(result_list)
+# print dd
 # User.query.order_by(db.desc(User.id))
 # db.drop_all()
 # print  db.session.query(CaseDataDb).all()

@@ -100,6 +100,21 @@ def getResult():
                 ResultLog.ResultLog().info(request.form.get(str(m)))
                 case_number=request.form.get(str(m))
                 case_id_list = db.session.query(ResultTestDb.id).filter_by(case_number=case_number).all()
-                result_list = db.session.query(ResultTestDb.id,ResultTestDb.case_number,ResultTestDb.Result_flag,ResultTestDb.case_result,ResultTestDb.add_time,ResultTestDb.image_path).filter_by(case_number=case_number).all()
+                result_list = db.session.query(ResultTestDb.id,ResultTestDb.case_number,ResultTestDb.Result_flag,ResultTestDb.case_result,ResultTestDb.add_time,ResultTestDb.image_path).order_by(db.desc(ResultTestDb.add_time)).filter_by(case_number=case_number).all()
     return render_template('autotemplates/getResult.html',result_data=result_list)
+
+
+
+@auto.route('/getAllResult',methods=['GET','POST'])
+def getAllResult():
+    """得到全部测试用例最后一次测试结果信息"""
+    result_data = []
+    query_case_information=db.session.query(CaseInformationDb).all()
+
+    for m in query_case_information:
+        result_list = db.session.query(ResultTestDb.case_number, ResultTestDb.Result_flag,ResultTestDb.add_time).order_by(db.desc(ResultTestDb.add_time)).filter_by(case_number=str(m)).first()
+        print result_list
+        result_data.append(result_list)
+    print result_data
+    return render_template('autotemplates/getAllResult.html',result_data=result_data)
 
