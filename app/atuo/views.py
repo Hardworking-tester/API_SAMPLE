@@ -4,7 +4,7 @@ from flask import *
 import time
 import urllib2,urllib
 from ..action import post
-from forms import FunctionModelsForm,CaseInformationForm,DataTestForm,ElementLocateForm,SubmitTestForm
+from forms import FunctionModelsForm,CaseInformationForm,DataTestForm,ElementLocateForm,SubmitTestForm,FunctionModelsEditForm
 from app.models import FunctionModelsDb,CaseInformationDb,CaseDataDb,ElementLocateDb,ResultTestDb
 from .. import db
 from . import auto
@@ -14,6 +14,7 @@ from ..resultlog import ResultLog
 def addFunctionModels():
     """新增功能模块视图"""
     form=FunctionModelsForm()
+
     if form.validate_on_submit():
         model=FunctionModelsDb(id=str(uuid.uuid4()).replace('-',''),name=form.model_name.data)
         form.model_name.data=''
@@ -21,6 +22,23 @@ def addFunctionModels():
         db.session.commit()
 
     return render_template('autotemplates/AddFunctionModel.html',form_html=form)
+
+@auto.route('/editModels',methods=['GET','POST'])
+def editFunctionModels():
+    """编辑功能模块视图"""
+
+    form=FunctionModelsEditForm()
+    if request.method=="POST":
+        form.model_name = request.form.get('modelname')
+        print "-------------------------%s-----------------------" %form.model_name
+        if form.validate_on_submit():
+            model=FunctionModelsDb(id=str(uuid.uuid4()).replace('-',''),name=form.model_name.data)
+            form.model_name.data=''
+            db.session.add(model)
+            db.session.commit()
+
+
+    return render_template('autotemplates/EditFunctionModel.html',form_html=form)
 
 @auto.route('/',methods=['GET','POST'])
 def index():
@@ -60,8 +78,9 @@ def addCaseInformation():
 @auto.route('/queryCaseInformation',methods=['GET','POST'])
 def queryCaseInformation():
     """查询所有测试用例视图"""
-    query_case_information=db.session.query(CaseInformationDb).all()
-    return render_template('autotemplates/queryCaseInformation.html',case_informations=query_case_information)
+    case_data=db.session.query(CaseInformationDb.case_number, CaseInformationDb.case_summary,
+                     CaseInformationDb.url, CaseInformationDb.post_data, CaseInformationDb.post_method).all()
+    return render_template('autotemplates/queryCaseInformation.html',case_informations=case_data)
 
 
 @auto.route('/executeTest',methods=['GET','POST'])
@@ -69,10 +88,7 @@ def executeTest():
     """执行测试"""
     query_case_information=db.session.query(CaseInformationDb).all()
     if request.method=="POST":
-
-
         for m in query_case_information:
-
             if request.form.get(str(m)) !=None:
                 id = str(uuid.uuid4()).replace('-', '')
                 case_id_list = db.session.query(CaseInformationDb.id).filter_by(case_number=request.form.get(str(m))).all()

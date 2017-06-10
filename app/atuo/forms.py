@@ -12,6 +12,12 @@ class FunctionModelsForm(Form):
     model_name=StringField(u'请输入功能模块名称',validators=[Required()])
     submit = SubmitField(u'提交')
 
+class FunctionModelsEditForm(Form):
+    """
+    编辑功能模块表单
+    """
+    model_name=StringField(u'请输入功能模块名称',validators=[Required()])
+    submit = SubmitField(u'提交')
 
 class CaseInformationForm(Form):
     """

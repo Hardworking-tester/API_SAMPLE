@@ -2,15 +2,25 @@
 {%import "bootstrap/wtf.html" as wtf%}
 {%block title%}AddFunctionModel{%endblock%}
 {% block page_content %}
-<h1>测试查询结果为：</h1>
-<div class="col-md-4">
-    <!--<div class="col-md-4">-->
+<h1>测试用例查询结果为：</h1>
+    <table width="100%"  cellspacing="50%" cellpadding="80" border="8">
+            <tr>
+                <td width="10%">测试用例编号</td>
+                <td width="20%">测试用例概述</td>
+                <td width="30%">目标url</td>
+                <td width="35%">post数据</td>
+                <td width="5%">请求方式</td>
+            </tr>
+            {% for case_data in case_informations %}
+            <tr>
+                <td>{{case_data[0]}}</td>
+                <td>{{case_data[1]}}</td>
+                <td>{{case_data[2]}}</td>
+                <td>{{case_data[3]}}</td>
+                <td>{{case_data[4]}}</td>
+            </tr>
+            {%endfor%}
 
-        <ul>
-        {% for case_information in case_informations %}
-            <li>测试用例编号为：{{case_information}}</li>
-        {% endfor %}
-        </ul>
-    <!--</div>-->
-</div>
+        </table>
+
 {% endblock %}

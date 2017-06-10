@@ -72,8 +72,8 @@ class ResultTestDb(db.Model):
 
     def __repr__(self):
         return '%s ' % self.case_number
-
-# print db.session.query(ResultTestDb).all()
+# print FunctionModelsDb.query.all()
+# print db.session.query(CaseInformationDb.id,CaseInformationDb.case_number,CaseInformationDb.case_summary,CaseInformationDb.url,CaseInformationDb.post_data,CaseInformationDb.post_method).all()
 # print ResultTestDb.query.order_by(db.desc(ResultTestDb.add_time)).all()
 # print db.session.query(ResultTestDb).order_by(db.desc(ResultTestDb.add_time)).count()
 # print db.session.query(ResultTestDb).order_by(db.desc(ResultTestDb.add_time)).filter_by(Result_flag=1).count()
