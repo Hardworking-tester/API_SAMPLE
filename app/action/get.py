@@ -1,10 +1,10 @@
 # encoding:utf-8
-# author:
+# author:wwg
 import urllib2,urllib,json
-class Post():
-    def post(self,post_url,first_post_data):
+class Get():
+    def get(self,post_url,first_post_data):
         """
-        发送post请求
+        发送get请求
         """
         flag = False
         post_url = post_url
@@ -19,4 +19,6 @@ class Post():
             flag = True
         else:
             flag = flag
+        # print flag
+        # print dict_result
         return flag, dict_result

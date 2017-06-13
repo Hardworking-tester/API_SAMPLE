@@ -36,6 +36,23 @@ class CaseInformationForm(Form):
                              for FunctionModels in db.session.query(FunctionModelsDb).all()]
 
 
+class CaseInformationEditForm(Form):
+    """
+    编辑测试用例表单
+    """
+    case_number=StringField(u'请输入测试用例编号',validators=[Required()])
+    case_summary=StringField(u'请输入测试用例概述',validators=[Required()])
+    model_name=SelectField(u'所属功能模块')
+    url = StringField(u'请输入请求地址', validators=[Required()])
+    post_data = StringField(u'请输入请求数据')
+    post_method =SelectField(u'请选择请求方法' ,choices=[('post', 'post'),('get', 'get'),('delete', 'delete')])
+    submit = SubmitField(u'提交')
+    def __init__(self,*args, **kwargs):
+        super(CaseInformationEditForm, self).__init__(*args, **kwargs)
+        self.model_name.choices = [(FunctionModels.id, FunctionModels.name)
+                             for FunctionModels in db.session.query(FunctionModelsDb).all()]
+
+
 
 class DataTestForm(Form):
     """

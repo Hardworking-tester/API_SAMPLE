@@ -72,7 +72,18 @@ class ResultTestDb(db.Model):
 
     def __repr__(self):
         return '%s ' % self.case_number
+
+
 # print FunctionModelsDb.query.all()
+
+# pp= db.session.query(FunctionModelsDb.name).filter_by(id='12da15b16e3044c983876b44556332d8').first()
+# print pp
+# print pp[0]
+# print type(pp[0])
+# uu1=db.session.query(FunctionModelsDb).filter_by(name='wwg11').first()
+# print uu1
+# uu1.name='wwg111'
+# db.session.commit()
 # print db.session.query(CaseInformationDb.id,CaseInformationDb.case_number,CaseInformationDb.case_summary,CaseInformationDb.url,CaseInformationDb.post_data,CaseInformationDb.post_method).all()
 # print ResultTestDb.query.order_by(db.desc(ResultTestDb.add_time)).all()
 # print db.session.query(ResultTestDb).order_by(db.desc(ResultTestDb.add_time)).count()

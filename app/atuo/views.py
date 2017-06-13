@@ -4,7 +4,7 @@ from flask import *
 import time
 import urllib2,urllib
 from ..action import post
-from forms import FunctionModelsForm,CaseInformationForm,DataTestForm,ElementLocateForm,SubmitTestForm,FunctionModelsEditForm
+from forms import FunctionModelsForm,CaseInformationForm,DataTestForm,ElementLocateForm,CaseInformationEditForm,FunctionModelsEditForm
 from app.models import FunctionModelsDb,CaseInformationDb,CaseDataDb,ElementLocateDb,ResultTestDb
 from .. import db
 from . import auto
@@ -28,14 +28,18 @@ def editFunctionModels():
     """编辑功能模块视图"""
 
     form=FunctionModelsEditForm()
-    if request.method=="POST":
-        form.model_name = request.form.get('modelname')
-        print "-------------------------%s-----------------------" %form.model_name
-        if form.validate_on_submit():
-            model=FunctionModelsDb(id=str(uuid.uuid4()).replace('-',''),name=form.model_name.data)
-            form.model_name.data=''
-            db.session.add(model)
-            db.session.commit()
+    query_model_information = db.session.query(FunctionModelsDb.name).all()
+    # if request.method == "POST":
+    global filter_name
+    for m in query_model_information:
+        if request.form.get(m[0]) != None:
+            form.model_name.data = request.form.get(m[0])
+            filter_name=request.form.get(m[0])
+    if form.validate_on_submit():
+        update_object = db.session.query(FunctionModelsDb).filter_by(name=filter_name).first()
+        update_object.name = form.model_name.data
+        form.model_name.data=''
+        db.session.commit()
 
 
     return render_template('autotemplates/EditFunctionModel.html',form_html=form)
@@ -75,12 +79,56 @@ def addCaseInformation():
     return render_template('autotemplates/addCaseInformation.html', form_html=form)
 
 
+
+@auto.route('/editCase',methods=['GET','POST'])
+def editCaseInformation():
+    """编辑测试用例视图"""
+    form =CaseInformationEditForm()
+    query_case_information = db.session.query(CaseInformationDb.case_number, CaseInformationDb.case_summary,
+                     CaseInformationDb.url, CaseInformationDb.post_data, CaseInformationDb.post_method,CaseInformationDb.id,CaseInformationDb.model_id).all()
+    global filter_id
+    for m in query_case_information:
+
+        if request.form.get(m[5]) != None:
+
+            form.case_number.data = m[0]
+            form.case_summary.data = m[1]
+            form.model_name.data = db.session.query(FunctionModelsDb.id).filter_by(id=m[6]).first()[0]
+            form.url.data = m[2]
+            form.post_data.data = m[3]
+            form.post_method.data = m[4]
+            filter_id = request.form.get(m[5])
+    if form.validate_on_submit():
+        update_case_object = db.session.query(CaseInformationDb).filter_by(id=filter_id).first()
+        update_case_object.case_number = form.case_number.data
+        update_case_object.case_summary= form.case_summary.data
+        update_case_object.url= form.url.data
+        update_case_object.post_data= form.post_data.data
+        update_case_object.post_method= form.post_method.data
+        update_case_object.model_id=form.model_name.data
+        form.case_number.data = ''
+        form.case_summary.data = ''
+        form.url.data = ''
+        form.post_data.data = ''
+        db.session.commit()
+    return render_template('autotemplates/editCaseInformation.html', form_html=form)
+
+
 @auto.route('/queryCaseInformation',methods=['GET','POST'])
 def queryCaseInformation():
     """查询所有测试用例视图"""
+    case_data=[]
     case_data=db.session.query(CaseInformationDb.case_number, CaseInformationDb.case_summary,
-                     CaseInformationDb.url, CaseInformationDb.post_data, CaseInformationDb.post_method).all()
-    return render_template('autotemplates/queryCaseInformation.html',case_informations=case_data)
+                     CaseInformationDb.url, CaseInformationDb.post_data, CaseInformationDb.post_method,CaseInformationDb.id,CaseInformationDb.model_id).all()
+    set_data=db.session.query(FunctionModelsDb.id,FunctionModelsDb.name).all()
+    module_id_name=dict(set_data)#集合转化为字典
+
+    return render_template('autotemplates/queryCaseInformation.html',case_informations=case_data,module_id_name=module_id_name)
+
+
+def getModuleNameById(module_id):
+
+    return db.session.query(FunctionModelsDb.name).filter_by(id=module_id).first()[0]
 
 
 @auto.route('/executeTest',methods=['GET','POST'])
@@ -129,8 +177,6 @@ def getAllResult():
 
     for m in query_case_information:
         result_list = db.session.query(ResultTestDb.case_number, ResultTestDb.Result_flag,ResultTestDb.add_time).order_by(db.desc(ResultTestDb.add_time)).filter_by(case_number=str(m)).first()
-        print result_list
         result_data.append(result_list)
-    print result_data
     return render_template('autotemplates/getAllResult.html',result_data=result_data)
 
