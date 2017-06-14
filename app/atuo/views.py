@@ -3,7 +3,7 @@
 from flask import *
 import time
 import urllib2,urllib
-from ..action import post
+from ..action import post,get
 from forms import FunctionModelsForm,CaseInformationForm,DataTestForm,ElementLocateForm,CaseInformationEditForm,FunctionModelsEditForm
 from app.models import FunctionModelsDb,CaseInformationDb,CaseDataDb,ElementLocateDb,ResultTestDb
 from .. import db
@@ -142,15 +142,18 @@ def executeTest():
                 case_id_list = db.session.query(CaseInformationDb.id).filter_by(case_number=request.form.get(str(m))).all()
                 case_id= case_id_list[0][0]
                 post_url=db.session.query(CaseInformationDb.url).filter_by(case_number=request.form.get(str(m))).all()[0][0]
-                first_post_data=db.session.query(CaseInformationDb.post_data).filter_by(case_number=request.form.get(str(m))).all()[0][0]
+                send_data=db.session.query(CaseInformationDb.post_data).filter_by(case_number=request.form.get(str(m))).all()[0][0]
                 post_method=db.session.query(CaseInformationDb.post_method).filter_by(case_number=request.form.get(str(m))).all()[0][0]
-                result=post.Post().post(post_url,eval(first_post_data))
-                flag=result[0]
-                result_data=result[1]
-                add_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-                test_result_data = ResultTestDb(id=id, case_number=request.form.get(str(m)), case_result=str(result_data), Result_flag=flag,add_time=add_time)
-                db.session.add(test_result_data)
-                db.session.commit()
+                if post_method=='post':
+                    post_result=post.Post().post(post_url,eval(send_data))
+                    flag=post_result[0]
+                    result_data=post_result[1]
+                    add_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+                    post_result_data = ResultTestDb(id=id, case_number=request.form.get(str(m)), case_result=str(result_data), Result_flag=flag,add_time=add_time)
+                    db.session.add(post_result_data)
+                    db.session.commit()
+                elif post_method=='get':
+                    get_result=get.Get().get(post_url)
     return render_template('autotemplates/executeTest.html',case_informations=query_case_information)
 
 

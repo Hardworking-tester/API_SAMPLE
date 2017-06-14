@@ -2,23 +2,13 @@
 # author:wwg
 import urllib2,urllib,json
 class Get():
-    def get(self,post_url,first_post_data):
+    def get(self,post_url):
         """
         发送get请求
         """
-        flag = False
-        post_url = post_url
-        first_post_data = first_post_data
-        post_data = urllib.urlencode(first_post_data)
-        req = urllib2.Request(post_url, post_data)
-        rep = urllib2.urlopen(req)
-        result = rep.read()
-        dict_result = json.loads(result)
 
-        if dict_result['returnCode'] == 200:
-            flag = True
-        else:
-            flag = flag
-        # print flag
-        # print dict_result
-        return flag, dict_result
+        url = post_url
+        req = urllib2.Request(url)
+        res_data = urllib2.urlopen(req)
+        res = res_data.read()
+        print res
