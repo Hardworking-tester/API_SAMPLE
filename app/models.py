@@ -75,9 +75,9 @@ class ResultTestDb(db.Model):
 
 
 # print FunctionModelsDb.query.all()
-
-# pp= db.session.query(FunctionModelsDb.name).filter_by(id='12da15b16e3044c983876b44556332d8').first()
-# print pp
+# set_data = db.session.query(FunctionModelsDb.id, FunctionModelsDb.name).all()#查询所有的功能模块的ID和名称并转化为字典
+# module_id_name = dict(set_data)  # 集合转化为字典# print pp
+# print module_id_name
 # print pp[0]
 # print type(pp[0])
 # uu1=db.session.query(FunctionModelsDb).filter_by(name='wwg11').first()

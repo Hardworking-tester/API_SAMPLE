@@ -135,6 +135,7 @@ def getModuleNameById(module_id):
 def executeTest():
     """执行测试"""
     query_case_information=db.session.query(CaseInformationDb).all()
+    all_case_information=db.session.query(CaseInformationDb.case_number,CaseInformationDb.case_summary,CaseInformationDb.model_id).all()
     if request.method=="POST":
         for m in query_case_information:
             if request.form.get(str(m)) !=None:
@@ -144,6 +145,8 @@ def executeTest():
                 post_url=db.session.query(CaseInformationDb.url).filter_by(case_number=request.form.get(str(m))).all()[0][0]
                 send_data=db.session.query(CaseInformationDb.post_data).filter_by(case_number=request.form.get(str(m))).all()[0][0]
                 post_method=db.session.query(CaseInformationDb.post_method).filter_by(case_number=request.form.get(str(m))).all()[0][0]
+                model_id=db.session.query(CaseInformationDb.model_id).filter_by(case_number=request.form.get(str(m))).all()[0][0]
+                case_summary=db.session.query(CaseInformationDb.case_summary).filter_by(case_number=request.form.get(str(m))).all()[0][0]
                 if post_method=='post':
                     post_result=post.Post().post(post_url,eval(send_data))
                     flag=post_result[0]
@@ -154,7 +157,9 @@ def executeTest():
                     db.session.commit()
                 elif post_method=='get':
                     get_result=get.Get().get(post_url)
-    return render_template('autotemplates/executeTest.html',case_informations=query_case_information)
+    set_data = db.session.query(FunctionModelsDb.id, FunctionModelsDb.name).all()#查询所有的功能模块的ID和名称并转化为字典
+    module_id_name = dict(set_data)  # 集合转化为字典
+    return render_template('autotemplates/executeTest.html',case_informations=all_case_information,module_id_name=module_id_name)
 
 
 @auto.route('/getResult',methods=['GET','POST'])
