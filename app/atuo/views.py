@@ -136,23 +136,25 @@ def executeTest():
     """执行测试"""
     query_case_information=db.session.query(CaseInformationDb).all()
     all_case_information=db.session.query(CaseInformationDb.case_number,CaseInformationDb.case_summary,CaseInformationDb.model_id).all()
+
     if request.method=="POST":
         for m in query_case_information:
-            if request.form.get(str(m)) !=None:
+            if str(m) ==request.form.get('idName'):
+                print request.form.get('idName')
                 id = str(uuid.uuid4()).replace('-', '')
-                case_id_list = db.session.query(CaseInformationDb.id).filter_by(case_number=request.form.get(str(m))).all()
+                case_id_list = db.session.query(CaseInformationDb.id).filter_by(case_number=request.form.get('idName')).all()
                 case_id= case_id_list[0][0]
-                post_url=db.session.query(CaseInformationDb.url).filter_by(case_number=request.form.get(str(m))).all()[0][0]
-                send_data=db.session.query(CaseInformationDb.post_data).filter_by(case_number=request.form.get(str(m))).all()[0][0]
-                post_method=db.session.query(CaseInformationDb.post_method).filter_by(case_number=request.form.get(str(m))).all()[0][0]
-                model_id=db.session.query(CaseInformationDb.model_id).filter_by(case_number=request.form.get(str(m))).all()[0][0]
-                case_summary=db.session.query(CaseInformationDb.case_summary).filter_by(case_number=request.form.get(str(m))).all()[0][0]
+                post_url=db.session.query(CaseInformationDb.url).filter_by(case_number=request.form.get('idName')).all()[0][0]
+                send_data=db.session.query(CaseInformationDb.post_data).filter_by(case_number=request.form.get('idName')).all()[0][0]
+                post_method=db.session.query(CaseInformationDb.post_method).filter_by(case_number=request.form.get('idName')).all()[0][0]
+                model_id=db.session.query(CaseInformationDb.model_id).filter_by(case_number=request.form.get('idName')).all()[0][0]
+                case_summary=db.session.query(CaseInformationDb.case_summary).filter_by(case_number=request.form.get('idName')).all()[0][0]
                 if post_method=='post':
                     post_result=post.Post().post(post_url,eval(send_data))
                     flag=post_result[0]
                     result_data=post_result[1]
                     add_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-                    post_result_data = ResultTestDb(id=id, case_number=request.form.get(str(m)), case_result=str(result_data), Result_flag=flag,add_time=add_time)
+                    post_result_data = ResultTestDb(id=id, case_number=request.form.get('idName'), case_result=str(result_data), Result_flag=flag,add_time=add_time)
                     db.session.add(post_result_data)
                     db.session.commit()
                 elif post_method=='get':

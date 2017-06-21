@@ -21,7 +21,7 @@
                 <td>{{module_id_name[case_information[2]]}}</td>
                 <td>
                     <!--{{url_for('auth.executeTest')}}?{{case_information[0]}}={{case_information[0]}}-->
-                    <a href="javascript:void(0);" class="J_sub_test" data-id="{{case_information[0]}}">提交测试</a>
+                    <a href="javascript:void(0);" class="J_sub_test" data-name="case_name" data-id="{{case_information[0]}}">提交测试</a>
                     <!--<input name={{case_information[0]}} style="border:0px;" value={{case_information[0]}} type="hidden" size="10" readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-default">提交测试</button></input>-->
 
                     <form method="post" action="{{url_for('auth.getResult')}}">
@@ -30,13 +30,7 @@
 
                 </td>
 
-				<!--<form method="post" action="{{url_for('auth.executeTest')}}">-->
-                <!--<td ><input name={{case_information[0]}} style="border:0px;" value={{case_information[0]}} type="hidden" size="10" readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-default">提交测试</button></input></td>-->
-                <!--</form>-->
 
-				<!--<form method="post" action="{{url_for('auth.getResult')}}">-->
-                <!--<td ><input name={{case_information[0]}} style="border:0px;" value={{case_information[0]}} type="hidden" size="10" readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-default">查看结果</button></input></td>-->
-                <!--</form>-->
             </tr>
             {%endfor%}
             <tr>
@@ -56,13 +50,15 @@
         //提交测试--单个
         $(".J_sub_test").on("click", function(event) {
            event.preventDefault();
-           var idVal = $(this).attr("data-id");     //当前值
+           var idName = $(this).attr("data-name"),
+               idVal = $(this).attr("data-id");     //当前值
+
            $.ajax({
                url: '{{url_for("auth.executeTest")}}',
                type: 'post',
                dataType: 'html',
                data: {
-                   case_0002 : idVal   //切记一会儿把这块儿改成统一名称，比如使用：把case_0002改成name
+                   idName : idVal   //切记一会儿把这块儿改成统一名称，比如使用：把case_0002改成name
                },
                success: function (data) {
 
@@ -86,7 +82,7 @@
                        type: 'post',
                        dataType: 'html',
                        data: {
-                           case_0002 : idVal   //切记一会儿把这块儿改成统一名称，比如使用：把case_0002改成name
+                           idName : idVal   //切记一会儿把这块儿改成统一名称，比如使用：把case_0002改成name
                        },
                        success: function (data) {
 
