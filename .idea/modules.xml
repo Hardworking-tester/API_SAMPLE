@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/API_SAMPLE.iml" filepath="$PROJECT_DIR$/.idea/API_SAMPLE.iml" />
+      <module fileurl="file://G:/Blog_mini-master/.idea/Blog_mini-master.iml" filepath="G:/Blog_mini-master/.idea/Blog_mini-master.iml" />
       <module fileurl="file://G:/HuaYing/.idea/HuaYing.iml" filepath="G:/HuaYing/.idea/HuaYing.iml" />
       <module fileurl="file://G:/HuaYingAPP/.idea/HuaYingAPP.iml" filepath="G:/HuaYingAPP/.idea/HuaYingAPP.iml" />
       <module fileurl="file://G:/auto_test/.idea/auto_test.iml" filepath="G:/auto_test/.idea/auto_test.iml" />

@@ -5,26 +5,110 @@
 <h1>测试查询结果为：</h1>
 <table width="100%"  cellspacing="50%" cellpadding="80" border="8">
             <tr>
+                <td width="5%">选择</td>
                 <td width="10%">测试用例编号</td>
                 <td width="10%">测试用例概述</td>
                 <td width="20%">所属模块</td>
-                <td width="2%"  align="center">操作</td>
+                <td  align="center">操作</td>
             </tr>
             {% for case_information in case_informations %}
             <tr>
-
+                <td>
+                    <input type="checkbox" name="check_item" id="" value="{{case_information[0]}}">
+                </td>
                 <td>{{case_information[0]}}</td>
                 <td>{{case_information[1]}}</td>
                 <td>{{module_id_name[case_information[2]]}}</td>
-				<form method="post" action="{{url_for('auth.executeTest')}}">
-                <td ><input name={{case_information[0]}} style="border:0px;" value={{case_information[0]}} type="hidden" size="10" readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-default">提交测试</button></input></td>
-                </form>
-				<form method="post" action="{{url_for('auth.getResult')}}">
-                <td ><input name={{case_information[0]}} style="border:0px;" value={{case_information[0]}} type="hidden" size="10" readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-default">查看结果</button></input></td>
-                </form>
+                <td>
+                    <!--{{url_for('auth.executeTest')}}?{{case_information[0]}}={{case_information[0]}}-->
+                    <a href="javascript:void(0);" class="J_sub_test" data-id="{{case_information[0]}}">提交测试</a>
+                    <!--<input name={{case_information[0]}} style="border:0px;" value={{case_information[0]}} type="hidden" size="10" readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-default">提交测试</button></input>-->
+
+                    <form method="post" action="{{url_for('auth.getResult')}}">
+                        <input name={{case_information[0]}} style="border:0px;" value={{case_information[0]}} type="hidden" size="10" readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-default">查看结果</button></input>
+                    </form>
+
+                </td>
+
+				<!--<form method="post" action="{{url_for('auth.executeTest')}}">-->
+                <!--<td ><input name={{case_information[0]}} style="border:0px;" value={{case_information[0]}} type="hidden" size="10" readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-default">提交测试</button></input></td>-->
+                <!--</form>-->
+
+				<!--<form method="post" action="{{url_for('auth.getResult')}}">-->
+                <!--<td ><input name={{case_information[0]}} style="border:0px;" value={{case_information[0]}} type="hidden" size="10" readonly="readonly">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button  type="submit" class="btn btn-default">查看结果</button></input></td>-->
+                <!--</form>-->
             </tr>
             {%endfor%}
+            <tr>
+                <td>
+                    <input type="checkbox" name="check_all" id="">
+                </td>
+                <td colspan="4">
+                    <a href="javascript:void(0);" class="J_sub_test_pl">批量提交测试</a>
+                </td>
+            </tr>
 
 </table>
+
+
+<script>
+    $(function() {
+        //提交测试--单个
+        $(".J_sub_test").on("click", function(event) {
+           event.preventDefault();
+           var idVal = $(this).attr("data-id");     //当前值
+           $.ajax({
+               url: '{{url_for("auth.executeTest")}}',
+               type: 'post',
+               dataType: 'html',
+               data: {
+                   case_0002 : idVal   //切记一会儿把这块儿改成统一名称，比如使用：把case_0002改成name
+               },
+               success: function (data) {
+
+                   //console.log(data);
+
+               }
+           });
+        });
+
+        //提交测试--批量
+        $(".J_sub_test_pl").on("click", function (event) {
+            event.preventDefault();
+            var subArr = [];
+            $("input[name='check_item']").each(function (i) {
+
+                if($(this).prop("checked")) {
+                    var idVal = $(this).val();     //当前值
+
+                    $.ajax({
+                       url: '{{url_for("auth.executeTest")}}',
+                       type: 'post',
+                       dataType: 'html',
+                       data: {
+                           case_0002 : idVal   //切记一会儿把这块儿改成统一名称，比如使用：把case_0002改成name
+                       },
+                       success: function (data) {
+
+                           //console.log(data);
+
+                       }
+                   });
+                }
+
+            });
+        });
+
+        //全选/取消反选
+        $("input[name='check_all']").on("click", function () {
+            if($(this).prop("checked")) {
+                $("input[name='check_item']").prop("checked", true);
+            } else {
+                $("input[name='check_item']").prop("checked", false);
+            }
+        });
+
+    });
+</script>
 {% endblock %}
 
