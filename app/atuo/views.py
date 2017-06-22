@@ -140,7 +140,6 @@ def executeTest():
     if request.method=="POST":
         for m in query_case_information:
             if str(m) ==request.form.get('idName'):
-                print request.form.get('idName')
                 id = str(uuid.uuid4()).replace('-', '')
                 case_id_list = db.session.query(CaseInformationDb.id).filter_by(case_number=request.form.get('idName')).all()
                 case_id= case_id_list[0][0]
