@@ -163,17 +163,18 @@ def executeTest():
     return render_template('autotemplates/executeTest.html',case_informations=all_case_information,module_id_name=module_id_name)
 
 
-@auto.route('/getResult',methods=['GET','POST'])
-def getResult():
+@auto.route('/getResult/<name>',methods=['GET','POST'])
+def getResult(name):
     """得到测试结果"""
     query_case_information=db.session.query(CaseInformationDb).all()
-    if request.method=="POST":
-        for m in query_case_information:
-            if request.form.get(str(m)) !=None:
-                ResultLog.ResultLog().info(request.form.get(str(m)))
-                case_number=request.form.get(str(m))
-                case_id_list = db.session.query(ResultTestDb.id).filter_by(case_number=case_number).all()
-                result_list = db.session.query(ResultTestDb.id,ResultTestDb.case_number,ResultTestDb.Result_flag,ResultTestDb.case_result,ResultTestDb.add_time,ResultTestDb.image_path).order_by(db.desc(ResultTestDb.add_time)).filter_by(case_number=case_number).all()
+    # if request.method=="POST":
+    for m in query_case_information:
+
+        if str(m) ==name:
+            ResultLog.ResultLog().info(str(m))
+            case_number=str(m)
+            case_id_list = db.session.query(ResultTestDb.id).filter_by(case_number=case_number).all()
+            result_list = db.session.query(ResultTestDb.id,ResultTestDb.case_number,ResultTestDb.Result_flag,ResultTestDb.case_result,ResultTestDb.add_time,ResultTestDb.image_path).order_by(db.desc(ResultTestDb.add_time)).filter_by(case_number=case_number).all()
     return render_template('autotemplates/getResult.html',result_data=result_list)
 
 
