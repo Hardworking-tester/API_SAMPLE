@@ -173,8 +173,8 @@ def getResult(name):
         if str(m) ==name:
             ResultLog.ResultLog().info(str(m))
             case_number=str(m)
-            case_id_list = db.session.query(ResultTestDb.id).filter_by(case_number=case_number).all()
             result_list = db.session.query(ResultTestDb.id,ResultTestDb.case_number,ResultTestDb.Result_flag,ResultTestDb.case_result,ResultTestDb.add_time,ResultTestDb.image_path).order_by(db.desc(ResultTestDb.add_time)).filter_by(case_number=case_number).all()
+
     return render_template('autotemplates/getResult.html',result_data=result_list)
 
 
